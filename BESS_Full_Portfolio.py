@@ -11,7 +11,7 @@ st.set_page_config(page_title="BESS Arbitrage Pro", layout="wide")
 st.title("⚡ Advanced Battery Arbitrage & Valuation Model")
 st.markdown("""
 This tool simulates a **Battery Energy Storage System (BESS)** trading in a volatile electricity market.
-It uses **Linear Programming (MILP)** to optimize charging schedules while accounting for physical degradation costs.
+It uses **Linear Programming (MILP)** to optimise charging schedules while accounting for physical degradation costs.
 """)
 
 # --- Sidebar Controls ---
@@ -55,7 +55,7 @@ final_prices = np.maximum(base_price + noise + spikes, 0) # No negative prices f
 df = pd.DataFrame({'price': final_prices})
 
 # ==========================================
-# 3. OPTIMIZATION ENGINE (With Degradation)
+# 3. OPTIMIsATION ENGINE (With Degradation)
 # ==========================================
 prob = pulp.LpProblem("Master_Optimization", pulp.LpMaximize)
 
@@ -93,7 +93,7 @@ if pulp.LpStatus[prob.status] == 'Optimal':
     for t in range(HOURS):
         c = charge_vars[t].varValue
         d = discharge_vars[t].varValue
-        # Realized profit for this hour
+        # Realised profit for this hour
         pnl = (d * df['price'][t]) - (c * df['price'][t]) - (d * DEG_COST)
         cum_profit += pnl
         profit_curve.append(cum_profit)
@@ -140,4 +140,4 @@ if pulp.LpStatus[prob.status] == 'Optimal':
         st.dataframe(df_res)
 
 else:
-    st.error("Optimization failed. Try adjusting constraints.")
+    st.error("Optimisation failed. Try adjusting constraints.")
