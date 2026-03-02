@@ -55,7 +55,7 @@ final_prices = np.maximum(base_price + noise + spikes, 0) # No negative prices f
 df = pd.DataFrame({'price': final_prices})
 
 # ==========================================
-# 3. OPTIMIsATION ENGINE (With Degradation)
+# 3. OPTIMISATION ENGINE (With Degradation)
 # ==========================================
 prob = pulp.LpProblem("Master_Optimization", pulp.LpMaximize)
 
