@@ -1,6 +1,6 @@
 # BESS-Arbitrage-Model
-Python model optimizing battery storage revenue using Linear Programming.
-# ⚡ BESS Energy Arbitrage Optimization Engine
+Python model optimising battery storage revenue using Linear Programming.
+# ⚡ BESS Energy Arbitrage Optimisation Engine
 <img width="1489" height="845" alt="Screenshot 2026-01-21 at 14 03 21" src="https://github.com/user-attachments/assets/9ff8e299-727f-493b-939c-c1ff7775cc0c" />
 
 ### Overview
@@ -17,7 +17,7 @@ This project models the operation of a **Battery Energy Storage System (BESS)** 
 ### 🛠️ Technologies Used
 * **Python 3.10+**
 * **Streamlit** (Web Interface)
-* **PuLP** (Linear Optimization Solver)
+* **PuLP** (Linear Optimisation Solver)
 * **Pandas & NumPy** (Data Manipulation & Stochastic Simulation)
 * **Matplotlib** (Financial Visualization)
 
