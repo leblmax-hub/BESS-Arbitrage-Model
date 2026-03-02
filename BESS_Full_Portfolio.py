@@ -57,7 +57,7 @@ df = pd.DataFrame({'price': final_prices})
 # ==========================================
 # 3. OPTIMISATION ENGINE (With Degradation)
 # ==========================================
-prob = pulp.LpProblem("Master_Optimization", pulp.LpMaximize)
+prob = pulp.LpProblem("Master_Optimisation", pulp.LpMaximize)
 
 # Variables
 charge_vars = pulp.LpVariable.dicts("Charge", range(HOURS), 0, MAX_POWER)
